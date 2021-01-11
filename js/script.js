@@ -1,9 +1,8 @@
 $(document).ready(function(){
     $('.nav-link').click(function(e){
         e.preventDefault();
-        $('.nav-link').removeClass('active');
         $('html').animate({
-            scrollTop: $($(this).addClass('active').attr('href')).offset().top - $('.navbar').outerHeight() - 30
+            scrollTop: $($(this).attr('href')).offset().top - $('.navbar').outerHeight() - 30
         }, 1000)
     }) 
     $(window).scroll(function(){
